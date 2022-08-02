@@ -1,0 +1,41 @@
+.contenedor {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.contenedor h2 {
+  position: relative;
+  top: 8rem;
+}
+
+.allDogs {
+	display: grid;
+  grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	margin: 5rem;
+	position: relative;
+	top: 90px;
+}
+
+.select {
+	display: flex;
+	background-color: grey;
+	height: 3rem;
+	width: 30rem;
+	justify-content: space-around;
+  align-items: center;
+	position: relative;
+	top: 120px;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 18px -6px;
+}
+
+.select select {
+  background-color: white;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+}

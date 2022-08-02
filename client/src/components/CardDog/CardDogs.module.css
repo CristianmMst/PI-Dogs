@@ -1,0 +1,62 @@
+.cardDog {
+	background-color: #f7f7f7;
+	font-size: 15px;
+	width: 350px;
+	height: 500px;
+	margin: auto;
+	border-radius: 8px;
+  box-shadow: 0.3rem 0.3rem 20px -5px;
+}
+
+.cardDog h3 {
+	display: flex;
+	justify-content: center;
+}
+
+.contenedorImg {
+	width: 90%;
+	height: 50%;
+	margin: 5% auto auto;
+}
+
+.cardDog img {
+	border-radius: 8px;
+	height: 100%;
+	width: 100%;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.info a {
+	font-size: 18px;
+	text-decoration: none;
+	color: grey;
+	margin-top: 2rem;
+}
+
+.info a:hover {
+	color: black;
+	margin-top: 2rem;
+}
+
+.lisTemp {
+	width: 90%;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+	padding: 0;
+	margin: 0;
+}
+
+.lisTemp li {
+	display: flex;
+	justify-content: center;
+	background-color: #d2d2d2;
+	border-radius: 0.5rem;
+}

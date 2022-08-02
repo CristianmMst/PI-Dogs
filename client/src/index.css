@@ -1,0 +1,9 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #575757;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
