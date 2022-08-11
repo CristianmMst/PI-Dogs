@@ -5,6 +5,12 @@ const { Breed, Temperament, Op } = require('../db.js');
 
 const router = Router();
 
+router.delete('/', async (req, res) => {
+	const { name } = req.query;
+	const dog = await Breed.destroy({ where: { name } });
+	return res.send(dog);
+});
+
 router.get('/', async (req, res) => {
 	const { name } = req.query;
 	const dogs = await axios(`https://api.thedogapi.com/v1/breeds`);

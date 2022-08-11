@@ -10,11 +10,11 @@ export default function Navbar({ setPagina }) {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const [input, setInput] = useState('');
-  const onClickHome = () => {
-    dispatch(getAllDogs())
+	const onClickHome = () => {
+		dispatch(getAllDogs());
 		navigate('/home');
-    setInput('')
-  }
+		setInput('');
+	};
 	const onClickCreate = () => {
 		navigate('/home/createDog');
 	};
@@ -34,8 +34,8 @@ export default function Navbar({ setPagina }) {
 
 	return (
 		<nav className={style.navContainer}>
-			<div onClick={onClickHome} className={style.imgDog}>
-				<img src={perroImg} alt="perro" />
+			<div className={style.imgDog}>
+				<img onClick={onClickHome} src={perroImg} alt="perro" />
 			</div>
 			<div className={style.search}>
 				<input

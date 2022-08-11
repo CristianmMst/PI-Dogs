@@ -77,7 +77,6 @@ export function getAllTemperament() {
 }
 
 // Filtros
-
 export function orderByTemp(temp) {
 	return function (dispacth) {
 		return fetch('http://localhost:3001/dogs')
