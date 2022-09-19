@@ -1,17 +1,22 @@
 import { useDispatch, useSelector } from 'react-redux';
 import style from './DogDetail.module.css';
 import close from '../../img/close.png';
-import { deleteDetail } from '../../redux/actions.js';
-import { useNavigate } from 'react-router-dom';
+import { deleteDetail, getDogDetail } from '../../redux/actions.js';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const DogDetail = () => {
-	const dispatch= useDispatch();
-  const navigate = useNavigate()
+	const { id } = useParams();
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 	const dogDetail = useSelector((state) => state.dogDetail);
 	const onClick = () => {
 		dispatch(deleteDetail());
-    navigate('/home')
+		navigate('/home');
 	};
+	useEffect(() => {
+		dispatch(getDogDetail(id));
+	}, []);
 	return (
 		<div className={style.contenedor}>
 			<h1>Detalle de raza</h1>
@@ -26,9 +31,9 @@ const DogDetail = () => {
 					<p>Años de vida: {dogDetail?.años_de_vida}</p>
 					<h4>Temperementos</h4>
 					<ul>
-						{dogDetail.temperamento?.map((e) => (
-							<li>{e}</li>
-						))}
+						{dogDetail.temperamento
+							? dogDetail.temperamento.map((e) => <li key={e}>{e}</li>)
+							: null}
 					</ul>
 				</div>
 				<img src={dogDetail.imagen} alt="perro" />

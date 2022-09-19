@@ -98,7 +98,7 @@ export default function Home() {
 								);
 							})}
 					</div>
-				<Paginado pagina={pagina} setPagina={setPagina} maximo={maximo} />
+					<Paginado pagina={pagina} setPagina={setPagina} maximo={maximo} />
 				</>
 			) : (
 				<h2>Raza no encontrada</h2>

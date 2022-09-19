@@ -1,7 +1,7 @@
 import axios from 'axios';
 export const GET_ALL_DOGS = 'GET_ALL_DOGS';
 export const GET_TEMPERAMENTS = 'GET_TEMPERAMENTS';
-export const GET_DOG_DETAIL = 'GET_GOG_DETAIL';
+export const GET_DOG_DETAIL = 'GET_DOG_DETAIL';
 export const SEARCH_DOG = 'SEARCH_DOG';
 export const ORDER_BY_TEMP = 'ORDER_BY_TEMP';
 export const ORDER_BY_ASCDES = 'ORDER_BY_ASCDES';

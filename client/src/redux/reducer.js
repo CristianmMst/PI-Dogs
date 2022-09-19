@@ -44,8 +44,10 @@ function rootReducer(state = initialState, action) {
 			return {
 				...state,
 				dogs: allDogs?.filter((d) => {
-					const dogsTrim = d.temperamento?.map((e) => e.trim());
-					const dogsFilter = dogsTrim?.includes(action.temp);
+					const dogsTrim = d.temperamento
+						? d.temperamento.map((e) => e.trim())
+						: null;
+					const dogsFilter = dogsTrim ? dogsTrim.includes(action.temp) : null;
 					return dogsFilter;
 				}),
 			};
